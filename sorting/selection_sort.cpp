@@ -10,8 +10,8 @@ void selectionSort(vector<int> &nums) {
   for (int i = 0; i < n - 1; i++) {
     int min_ind = i;
 
-    for (int j = i + 1; i < n - 1; i++) {
-      if (nums[j] > nums[min_ind]) {
+    for (int j = i + 1; j < n; j++) {
+      if (nums[j] < nums[min_ind]) {
         min_ind = j;
       }
     }
