@@ -37,7 +37,7 @@ Node *reverseLinkedList(Node *&head) {
   Node *curr = head;
   Node *forw = nullptr;
 
-  while (!curr) {
+  while (curr != nullptr) {
     forw = curr->next;
     curr->next = prev;
     prev = curr;
@@ -53,6 +53,10 @@ int main(int argc, char *argv[]) {
   insertAtHead(head, 3);
   insertAtHead(head, 2);
   insertAtHead(head, 1);
+
+  printList(head);
+
+  head = reverseLinkedList(head);
 
   printList(head);
   return 0;
